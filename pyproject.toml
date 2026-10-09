@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "f1detective"
+version = "0.1.0"
+description = "CLI pequeño para investigar archivos del sistema."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "rich>=13.0",
+]
+
+[project.scripts]
+f1detective = "f1detective.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["f1detective*"]
